@@ -1,0 +1,39 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+
+
+    //TextSize
+    <dimen name="tv.12">12sp</dimen>
+    <dimen name="tv.14">14sp</dimen>
+    <dimen name="tv.18">18sp</dimen>
+
+
+    //Margin
+    <dimen name="margin.2.5">2.5dp</dimen>
+    <dimen name="margin.5">5dp</dimen>
+    <dimen name="margin.8">8dp</dimen>
+    <dimen name="margin.10">10dp</dimen>
+    <dimen name="margin.15">15dp</dimen>
+    <dimen name="margin.20">20dp</dimen>
+    <dimen name="margin.25">25dp</dimen>
+    <dimen name="margin.30">30dp</dimen>
+    <dimen name="margin.40">40dp</dimen>
+    <dimen name="margin.50">50dp</dimen>
+    <dimen name="margin.60">60dp</dimen>
+    <dimen name="margin.70">70dp</dimen>
+    <dimen name="margin.80">80dp</dimen>
+    <dimen name="margin.120">120dp</dimen>
+    <dimen name="margin.130">130dp</dimen>
+
+
+    //Size
+    <dimen name="size.240">240dp</dimen>
+    <dimen name="size.250">250dp</dimen>
+    <dimen name="size.330">330dp</dimen>
+
+    //Padding
+    <dimen name="padding.5">5dp</dimen>
+    <dimen name="padding.10">10dp</dimen>
+    <dimen name="padding.20">20dp</dimen>
+</resources>

@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_height="@dimen/margin.50"
+        android:id="@+id/rlHeader"
+        android:onClick="onHideKeyBoard"
+        android:layout_marginTop="@dimen/margin.10"
+        android:layout_width="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/tv.order"
+            android:id="@+id/tvHeaderProduct"
+            android:layout_centerInParent="true" />
+        <Button
+            android:layout_width="@dimen/margin.50"
+            android:layout_height="@dimen/margin.50"
+            android:id="@+id/btnBack"
+            android:onClick="onBackClick"
+
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+        <ImageView
+            android:layout_width="@dimen/margin.15"
+            android:layout_height="@dimen/margin.15"
+            android:id="@+id/ivBack"
+android:contentDescription="@string/desc.back"
+            android:layout_marginLeft="@dimen/margin.10"
+            android:layout_marginRight="@dimen/margin.10"
+            android:background="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="wrap_content"
+       android:background="@android:color/darker_gray"
+        android:layout_below="@+id/rlHeader"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/vHeader" />
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/vHeader"
+        android:scrollbars="none">
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+
+        android:onClick="onHideKeyBoard">
+
+
+
+        <RelativeLayout android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/margin.20"
+android:layout_marginTop="@dimen/margin.40"
+            android:id="@+id/rlName">
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearance"
+                android:text="@string/tv.fnln"
+                android:id="@+id/tvHintOne"
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.10"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.10"
+
+
+                android:textColor="@android:color/darker_gray"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilFirstName"
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.10"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.10"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+                android:layout_below="@+id/tvHintOne"
+                android:layout_marginTop="@dimen/margin.10"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/view"
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etFirstName"
+                android:hint="@string/hint.firstname"
+android:textSize="@dimen/tv.14"
+                android:backgroundTint="@android:color/black"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/view"
+
+                android:inputType="text"
+                android:layout_toStartOf="@+id/view" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <View
+                android:layout_height="@dimen/margin.50"
+                android:layout_width="2dp"
+                android:layout_marginTop="@dimen/margin.5"
+                android:layout_below="@+id/tvHintOne"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/view" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilLastName"
+                android:layout_below="@+id/tvHintOne"
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.20"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.20"
+android:layout_marginTop="@dimen/margin.10"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/view"
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etLastName"
+                android:backgroundTint="@android:color/black"
+                android:hint="@string/hint.lastname"
+                android:inputType="text"
+                android:textSize="@dimen/tv.14"
+
+                android:layout_toRightOf="@+id/view"
+                android:layout_toEndOf="@+id/view"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlName"
+            android:id="@+id/rlCard"
+
+           >
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/tv.longno"
+                android:id="@+id/tvHinttwo"
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.10"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.10"
+                android:textColor="@android:color/darker_gray" />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilCardNumber"
+
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.20"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.20"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+                android:layout_below="@+id/tvHinttwo"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin.10"
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/etCardNumber"
+                android:textSize="@dimen/tv.14"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="@string/hint.cardnumber"
+                android:backgroundTint="@android:color/black"
+                android:digits="01234 56789"
+                android:inputType="number"
+                android:maxLength="19"
+
+                 />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlCard"
+            android:id="@+id/rlCvv"
+
+            android:layout_marginTop="@dimen/margin.20">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/tv.digit"
+                android:id="@+id/tvHintthree"
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.10"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.10"
+                android:textColor="@android:color/darker_gray"
+                />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilCvv"
+
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.10"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.10"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+                android:layout_below="@+id/tvHintthree"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin.10"
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="@dimen/margin.50"
+                android:layout_height="match_parent"
+                android:id="@+id/etCvv"
+                android:layout_below="@+id/tvHintthree"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:maxLength="4"
+                android:hint="@string/hint.cvv"
+                android:textSize="@dimen/tv.14"
+                android:inputType="number"
+                android:backgroundTint="@android:color/black"
+                />
+
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlCvv"
+            android:id="@+id/rlExpDate"
+
+            android:layout_marginTop="@dimen/margin.20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/tv.exp"
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.5"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.5"
+                android:id="@+id/tvExDate"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/margin.40"
+                android:id="@+id/tvDate"
+                android:layout_below="@+id/tvExDate"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:visibility="gone"
+                android:padding="@dimen/padding.10"
+                android:background="@null"
+                />
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilMonth"
+                android:layout_marginTop="@dimen/margin.10"
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.10"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.10"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+                android:layout_toStartOf="@+id/vMonthYear"
+                android:layout_toLeftOf="@+id/vMonthYear"
+                android:layout_below="@+id/tvDate"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/etMonth"
+                android:backgroundTint="@android:color/black"
+                android:layout_below="@+id/tvExDate"
+
+                android:textSize="@dimen/tv.14"
+android:maxLength="2"
+                android:layout_toLeftOf="@+id/vMonthYear"
+
+                android:inputType="number"
+                android:hint="@string/hint.month"
+
+                />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <View
+                android:layout_height="@dimen/margin.50"
+                android:layout_width="2dp"
+                android:layout_marginTop="@dimen/margin.5"
+                android:layout_below="@+id/tvExDate"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/vMonthYear" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilYear"
+
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.20"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.20"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+                android:layout_toEndOf="@+id/vMonthYear"
+                android:layout_toRightOf="@+id/vMonthYear"
+                android:layout_below="@+id/tvDate"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin.10"
+
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/etYear"
+                android:layout_below="@+id/tvExDate"
+                android:textSize="@dimen/tv.14"
+android:maxLength="4"
+                android:inputType="number"
+                android:hint="@string/hint.year"
+                android:backgroundTint="@android:color/black"
+                android:layout_toRightOf="@+id/vMonthYear" />
+
+
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlExpDate"
+            android:id="@+id/rlAddress1"
+
+            android:layout_marginTop="@dimen/margin.20">
+
+
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilAddress1"
+
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.20"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.20"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etAddress1"
+                android:layout_below="@+id/tvAddress1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="@string/hint.address.1"
+                android:textSize="@dimen/tv.14"
+                android:backgroundTint="@android:color/black"
+                android:inputType="textPostalAddress"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlAddress1"
+            android:id="@+id/rlAddress2"
+
+            android:layout_marginTop="@dimen/margin.20">
+
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilAddress2"
+
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.20"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.20"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/margin.40"
+                android:id="@+id/etAddress2"
+                android:layout_below="@+id/tvAddress2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="@string/hint.address.2"
+                android:backgroundTint="@android:color/black"
+                android:inputType="textPostalAddress"
+                android:textSize="@dimen/tv.14"/>
+
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlAddress2"
+
+            android:layout_marginTop="@dimen/margin.20"
+            android:id="@+id/rlCityState">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilCity"
+
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.10"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.10"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/vCityState"
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/margin.40"
+                android:id="@+id/etCity"
+                android:layout_below="@+id/tvCitydes"
+                android:backgroundTint="@android:color/black"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/vCityState"
+               android:textSize="@dimen/tv.14"
+                android:inputType="text"
+                android:hint="@string/hint.city"
+                android:layout_toStartOf="@+id/vCityState" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <View
+                android:layout_height="@dimen/margin.50"
+                android:layout_width="2dp"
+                android:layout_marginTop="@dimen/margin.5"
+
+                android:layout_centerHorizontal="true"
+                android:id="@+id/vCityState" />
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilState"
+
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.20"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.20"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/vCityState"
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin.40"
+                android:id="@+id/etState"
+                android:hint="@string/hint.state"
+                android:layout_below="@+id/tvStatedes"
+                android:backgroundTint="@android:color/black"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/vCityState"
+
+                android:inputType="text"
+                android:textSize="@dimen/tv.14"
+                android:layout_toRightOf="@+id/vCityState" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlCityState"
+
+            android:layout_marginTop="@dimen/margin.20"
+            android:id="@+id/rlCodeCountry">
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilZipCode"
+
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.10"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.10"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/vZipCon"
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin.40"
+                android:id="@+id/etZipCode"
+                android:layout_below="@+id/tvZipdes"
+android:textSize="@dimen/tv.14"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/vZipCon"
+                android:backgroundTint="@android:color/black"
+                android:inputType="text"
+                android:hint="@string/hint.zipcode"
+                android:layout_toStartOf="@+id/vZipCon" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <View
+                android:layout_height="@dimen/margin.50"
+                android:layout_width="2dp"
+                android:layout_marginTop="@dimen/margin.5"
+
+                android:layout_centerHorizontal="true"
+                android:id="@+id/vZipCon" />
+
+
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/tv.country"
+                android:visibility="gone"
+
+                android:id="@+id/tvCondes"
+                android:layout_toEndOf="@+id/vZipCon"
+                android:layout_toRightOf="@+id/vZipCon"
+                android:layout_marginStart="@dimen/margin.10"
+                android:layout_marginLeft="@dimen/margin.10"/>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilCountry"
+
+
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.20"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.10"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+               android:layout_below="@+id/tvCondes"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/vZipCon"
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin.40"
+                android:id="@+id/etCountry"
+                android:layout_below="@+id/tvCondes"
+               android:textSize="@dimen/tv.14"
+                android:backgroundTint="@android:color/black"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/vZipCon"
+
+                android:inputType="text"
+                android:hint="@string/hint.country"
+                android:layout_toRightOf="@+id/vZipCon" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlCodeCountry"
+            android:layout_marginTop="@dimen/margin.20"
+
+            android:id="@+id/rlComments">
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ilComments"
+
+                android:paddingLeft="@dimen/padding.20"
+                android:paddingRight="@dimen/padding.10"
+                android:paddingStart="@dimen/padding.20"
+                android:paddingEnd="@dimen/padding.10"
+                android:layout_width="match_parent"
+                android:textColorHint="#000"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/margin.40"
+                android:id="@+id/etComments"
+                android:layout_below="@+id/tvComdes"
+             android:textSize="@dimen/tv.14"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:backgroundTint="@android:color/black"
+                android:hint="@string/hint.comments"
+                android:inputType="text" />
+
+
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+
+
+        <Button android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin.60"
+android:layout_marginTop="@dimen/margin.30"
+          android:layout_below="@+id/rlComments"
+            android:id="@+id/btnPayment"
+            android:background="#1D55F7"
+            android:textColor="#FFF"
+            android:onClick="onPayClick">
+        </Button>
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlSucess"
+android:visibility="gone"
+        android:clickable="true"
+        android:background="#955682FE">
+
+
+        <ImageView android:layout_height="150dp"
+            android:layout_width="150dp"
+            android:id="@+id/ivSucess"
+            android:contentDescription="@string/desc.sucess"
+            android:src="@drawable/ic_sucess"
+            android:layout_centerInParent="true"/>
+
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/tv.sucess"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="@dimen/padding.5"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ivSucess"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+</RelativeLayout>
